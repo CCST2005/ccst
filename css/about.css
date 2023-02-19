@@ -1,0 +1,119 @@
+section * {
+  box-sizing: border-box;
+}
+
+section{
+ margin-top: 0;
+}
+/* Column container */
+.roww {  
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  flex: 30%;
+ 
+  padding: 10px;
+ 
+}
+
+/* Main column */
+.main {
+  flex: 70%;
+  background-color: white;
+  padding: 10px;
+  padding-left: 20px;
+
+}
+.side{
+  border-right: 1px solid #b8bde4;
+  
+}
+.roww{
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 60px;
+  
+}
+.main h2{
+  
+position: relative;
+text-decoration: underline;
+
+text-decoration-thickness: 4px;
+}
+.main_p{
+  margin-bottom: 20px;
+}
+
+      
+section{
+  font-size: 17px;
+  margin:13vw;
+  margin-top: 70px;
+  margin-bottom: 100px;
+  color: #161F69;
+  
+}
+
+
+@media screen and (max-width: 1200px) {
+  .main_p{
+    margin-bottom: 0px;
+  }
+  .roww {   
+    flex-direction: column;
+
+  }
+  .main h2{
+    text-decoration: none;
+    }
+    .main h2{
+      text-align: center;
+      }
+      .main p{
+        text-align: center;
+      }
+      .side{
+        text-align: center;
+      }
+      .side{
+        border:0;
+      }
+      section{
+        margin-top: 80px;
+        margin-bottom: 80px;
+      }
+      .main{
+        padding: 0 ;
+        padding-left: 0;
+      }
+
+}
+@media screen and (max-width: 700px) {
+  section{
+    font-size: 13px;
+
+    margin: 5vw;
+
+  }
+  .roww{
+    padding: 10px;
+    box-shadow: none;
+  }
+  .main h2{
+    text-align: left;
+    margin-top: 10px;
+    }
+    .main p{
+      text-align: left;
+    }
+    .side{
+      text-align: left;
+      padding: 0;
+    }
+    
+}

@@ -1,0 +1,145 @@
+footer *{
+    box-sizing: border-box;
+
+}
+footer{
+    animation: none !important;
+     background-color:#002064;
+     position: relative;
+     border-top: 1px solid #161F69;
+     padding: 3rem 3rem;
+     
+}
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   
+
+
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+ 
+    position: relative;
+}
+.row::before{
+  content: '';
+  width: 100%;
+  height: 1px;
+  top: -20px;
+  background-color: #ffffff85;
+position: absolute;
+
+}
+.col{
+  position: relative;
+    
+    color:#f2f2f2f2;
+    font-family: poppins;
+    padding:0 2rem;
+}
+
+
+.logso{
+  z-index: 1;
+  position: block;
+
+    background-color: transparent;
+    border-radius: 0;
+    width: 500px;
+    box-shadow: 0 0 ;
+    opacity: 1;
+    margin-bottom:40px;
+}
+.contact-details .location{
+    line-height: 13px;
+}
+.col_p{
+  color: #ffffff;
+  font-weight: 400;
+}
+.col h3{
+    color:#f3f3f3;
+    margin-bottom: 10px;
+    position: relative;
+ 
+}
+
+.col .social a i{
+    color:#161F69;
+    margin-top:2rem;
+    margin-right: 5px;
+    transition: 0.3s ease;
+}
+.col .social a i:hover{
+    transform: scale(1.5);
+    filter:grayscale(25);
+    
+}
+.col .links a{
+  padding: 5px;
+    display: block;
+    text-decoration: none;
+    color:#f2f2f2;
+    margin-bottom: 5px;
+    position: relative;
+    transition: 0.3s ease;
+}
+
+.col{
+  width: 80%;
+}
+.col .links a:hover{
+    transform: translateX(-8px);
+    color:#161F69;
+    background-color: #ffffff59;
+}
+.col .contact-details{
+    display: flex;
+
+    
+}
+.col .contact-details i{
+    margin-right:15px;
+}
+
+@media(max-width:300px)
+{
+    .logso{
+      display: none;
+        
+    }
+}
+@media(max-width:1000px)
+{
+    .logso{
+        width: 300px;
+    }
+  .row{
+    flex-direction: column;
+  }
+  .col{
+    width: 100%;
+    text-align: left;
+    margin-bottom: 25px;
+  }
+  #contact{
+    flex-direction: column;
+  }
+}
+@media(max-width:768px)
+{
+  .row{
+    flex-direction: column;
+  }
+  .col{
+    width: 100%;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+}

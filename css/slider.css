@@ -1,0 +1,136 @@
+.slider{
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    height: 70vh; 
+     position: relative;
+     display: flex;
+     justify-content: center;
+     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+     min-height: 350px; 
+}
+.arrows_div{
+   
+    position: absolute;
+    width: 100%;
+    top: 40%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+    
+}
+.arrows_div img{
+ 
+    transition: .3s ease;
+    height: 40px;
+    cursor: pointer;
+    opacity: 40%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.arrows_div img:hover{
+    opacity: 100%;
+}
+.slider_image{
+   
+    transition: 2s ease;
+    
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+
+   position: absolute;
+   width: 100%;
+   height: 100%;
+}
+.slider_image::before{
+    height: 100%;
+    width: 100%;
+    content: '';
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.637);
+}
+.div_slider{
+    position: relative;
+}
+.slider_h1{
+    font-size: 55px;
+    color: white;
+    font-weight: 600;
+    text-align: center;
+}
+
+.slider_div_h1,.slider_div_p{
+    position: absolute;
+    width: 100%;
+    top: 35%;
+}
+.slider_div_p{
+    width: 40%;
+    top: 50%;
+    
+}
+.slider_p{
+    
+    color: white;
+    text-align: center;
+    font-size: 20px;
+}
+
+.div_Footer_for_slider{
+    
+    height: 0px;
+    position: relative;
+
+}
+.footer_slider{
+    position: relative;
+    transform: translateY(-3.5vw);
+    width: 100%;
+  
+  
+    
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+   
+}
+.footer_slider_cards{
+    min-height: 5vw;
+    min-width: 8vw;
+    max-width: 8vw;
+    max-height: 5vw;
+    position: relative;
+    border-radius: 3px;
+    border: 2px solid transparent;
+    transition: .3s ease;
+    
+}
+.footer_slider_cards img{
+    object-fit: cover;
+    height: 100%;
+    width: 8vw;
+    
+    z-index: 0;
+    position: relative;
+   transition: .3 ease;
+
+}
+.footer_slider_cards span{
+    width: 100%;
+    z-index: 999;
+    position: absolute;
+    height: 100%;
+    cursor: pointer;
+    transition: .8s ease;
+   
+    background-color: rgba(0, 0, 0, 0.575);
+}
+.footer_slider_cards span:hover{
+  
+    background-color: rgba(0, 0, 0, 0);
+}
+.footer_slider_cards:hover{
+    
+    border: 2px solid rgb(0, 35, 231);
+}
