@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clark College of Science and Technology</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/media_qry.css">
+    <link rel="stylesheet" href="./css/slider.css">
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="./css/footer.css">
+</head>
+
+<body>
+    <script>
+        function animation_hamburger(){
+            hamburger_id.classList.toggle("active");
+            Nav_for_mobile_id.classList.toggle("active");
+            id_apply_copy.classList.toggle("active");
+
+        }
+        // animation on scroll
+        window.addEventListener('scroll',reveal);
+
+        function reveal(){
+            var reveals = document.querySelectorAll('.reveal');
+           
+            for(var i = 0; i < reveals.length; i++){
+                var windowheight = window.innerHeight;
+                var revealtop = reveals[i].getBoundingClientRect().top;
+                var revealpoint = 100;
+
+                if(revealtop < windowheight - revealpoint){
+                    reveals[i].classList.add('active');
+    
+                }
+                else{
+                    reveals[i].classList.reveal('active');
+              
+                }
+            }
+        }
+    </script>
+
+    <!-- Contact & Fb link -->
+    <div class="Contact_Fb_link">
+        <!-- Contact -->
+        <div>
+            <img src="./SVG/Phone/phone-5978.svg" alt="">
+            <h4>(045)-624-0215</h4>
+        </div>
+        <!-- facebook -->
+        <div>
+            <img src="./SVG/facebook/facebook.svg" alt="">
+            <h4>clarkcollege2005</h4>
+        </div>
+    </div>
+    <div class="div_For_Nav_And_Mobile_Nav">
+        <!-- Navbar -->
+        <nav>
+            <!-- CCST LOGO -->
+            <a href="index.html"><img src="./SVG/CCST_LOGO/CCST_LOGO.svg" alt=""></a>
+            <!-- OPTIONS -->
+
+            <ul>
+                <li><a href="index.html"><h2>Home</h2></a></li>
+                <li><a href="gallery.html"><h2>Gallery</h2></a></li>
+                <li><a href="admission.html"><h2>Admission</h2></a></li>
+                <li><a href="contact_us.html"><h2>Contact us</h2></a></li>
+                <li><a href="about.html"><h2>About us</h2></a></li>
+            </ul>
+            <button class="apply">
+                <span></span>
+            </button>
+            <!-- Hambur -->
+
+
+            <button id="hamburger_id" onclick="animation_hamburger()" class="hamburger">
+                <div></div>
+            </button>
+        </nav>
+        <!-- Nav_for_mobile -->
+        <div id="Nav_for_mobile_id" class="Nav_for_mobile">
+                <ul>
+                    <a href="index.html"><li><h2 class="Nav_animation_one">Home</h2></li></a>
+                    <a href="gallery.html"><li><h2 class="Nav_animation_two">Gallery</h2></li></a>
+                    <a href="admission.html"><li><h2 class="Nav_animation_three">Admission</h2></li></a>
+                    <a href="contact_us.html"><li><h2 class="Nav_animation_four">Contact us</h2></li></a>
+                    <a href="about.html"><li><h2 class="Nav_animation_five">About us</h2></li></a>
+                </ul>
+        </div>
+        <!-- Copy_of_apply_button -->
+        <button class="apply_copy" id="id_apply_copy">
+            <span>ONLINE APPLICATION</span>
+        </button>
+    </div>
+    <!-- slider -->
+    <div class="div_for_slider">
+        <div class="slider" >
+            <!-- arrows -->
+            <div class="arrows_div">
+                <img onclick="reverse()" src="./SVG/arrows/arrow-left.svg" alt="">
+                <img onclick="next()" src="./SVG/arrows/arrow-right.svg" alt="">
+            </div>
+            <div id="slider_id" class="slider_image"></div>
+            <div class="slider_div_h1">
+            
+                <h1 id="check" class="slider_h1">Best School For You</h1>
+                
+            </div>
+            <div class="slider_div_p">
+            <p class="slider_p">Do you wish to pursue a new career, develop your current skills, or obtain a college degree? Clark College is a great place to start!</p>
+            </div>
+    
+        </div>
+        <div class="div_Footer_for_slider">
+            <div class="footer_slider">
+                <div class="footer_slider_cards">
+                    <span onclick="number_one()"></span><img src="278003080_3156644484600257_3080308866372288638_n.jpg" alt="">
+                </div>
+                <div class="footer_slider_cards">
+                    <span onclick="number_two()" value="282203222_3194070184191020_2144741875943196181_n.jpg"></span><img src="282203222_3194070184191020_2144741875943196181_n.jpg" alt="">
+                </div>
+                <div class="footer_slider_cards">
+                    <span onclick="number_three()" value="282832631_3194070470857658_6039191141026880181_n.jpg"></span><img src="282832631_3194070470857658_6039191141026880181_n.jpg" alt="">
+                </div>
+                <div class="footer_slider_cards">
+                    <span onclick="number_four()" value="283977559_3194070320857673_6450882983500082835_n.jpg"></span><img src="283977559_3194070320857673_6450882983500082835_n.jpg" alt="">
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <!-- slider_script -->
+    <script>
+        var num = 0;
+        var imgs = ["278003080_3156644484600257_3080308866372288638_n.jpg","282203222_3194070184191020_2144741875943196181_n.jpg","282832631_3194070470857658_6039191141026880181_n.jpg","283977559_3194070320857673_6450882983500082835_n.jpg","284036859_3194070640857641_4011855805553505035_n.jpg","284111959_3194073817523990_9203744498745432579_n.jpg"];
+        
+        
+
+        
+        slider_id.style.backgroundImage = "url("+imgs[0]+")";
+        function displayHello() {
+        if (num == imgs.length-1){
+            num = 0;
+        }
+        else{
+            num++;
+        }
+        var slider_id = document.getElementById("slider_id");
+        slider_id.style.backgroundImage = "url("+imgs[num]+")";
+       
+        
+        }
+        
+        myInterval = setInterval(displayHello, 3000);
+        function reverse(){
+            if(num == 0){
+                num = imgs.length-1;
+            }
+            else{
+                num--;
+            }
+            clearInterval(myInterval);
+         
+            slider_id.style.backgroundImage = "url("+imgs[num]+")";
+          
+            myInterval = setInterval(displayHello, 3000);
+        }
+        function next(){ 
+            if (num == imgs.length-1){
+            num = 0;
+            }
+            else{
+                num++;
+            }
+            clearInterval(myInterval);
+            slider_id.style.backgroundImage = "url("+imgs[num]+")";
+           
+            myInterval = setInterval(displayHello, 3000);
+        }
+
+        function number_one(){
+            clearInterval(myInterval);
+            num = 0;
+            slider_id.style.backgroundImage = "url("+imgs[num]+")";
+            myInterval = setInterval(displayHello, 3000);
+        }
+        function number_two(){
+            clearInterval(myInterval);
+            num = 1;
+            slider_id.style.backgroundImage = "url("+imgs[num]+")";
+            myInterval = setInterval(displayHello, 3000);  
+        }
+        function number_three(){
+            clearInterval(myInterval);
+            num = 2;
+            slider_id.style.backgroundImage = "url("+imgs[num]+")";
+            myInterval = setInterval(displayHello, 3000);  
+        }
+        function number_four(){
+            clearInterval(myInterval);
+            num = 3;
+            slider_id.style.backgroundImage = "url("+imgs[num]+")";
+            myInterval = setInterval(displayHello, 3000);  
+        }
+    </script>
+    <!-- content -->
+    <section>
+
+
+        <!-- About Us and Events Body -->
+        <div class="line_about_us_events_body">
+            <div class="About_Us_and_Events_Body reveal">
+                <div class="box_one">
+                    <h1>WHY US?</h1>
+                    <p class="description_why_us">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+                    
+                    <a href="about.html"><button class="about_us">
+                        <span></span>
+                    </button></a>
+                </div>
+                <div class="box_two">
+
+                    <h1>FEATURED EVENTS</h1>
+                    
+                        <div class="flex_box_for_frames">
+                            <div class="col-sm-4">
+                        <div class="card">
+                            <div class="image">
+                                <img src="283995607_3194070000857705_5398020701507821655_n.jpg" />
+                            </div>
+                            <div class="card-inner">
+                                <div class="header">
+
+                                    <h2 class="Event_titles">New year's fiesta...</h2>
+
+                                    <div class="header_div_p">
+                                        <img src="./SVG/calendar/schedule-calendar-icon.svg" alt="">
+                                        <p>Nov. 18 2023</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="col-sm-4">
+                        <div class="card">
+                            <div class="image">
+                                <img src="283995607_3194070000857705_5398020701507821655_n.jpg" />
+                            </div>
+                            <div class="card-inner">
+                                <div class="header">
+                                    <h2 class="Event_titles">Title</h2>
+                                    <div class="header_div_p">
+                                        <img src="./SVG/calendar/schedule-calendar-icon.svg" alt="">
+                                        <p>Nov. 18 2023</p>
+                                    </div>
+                                </div>
+                            
+                            </div>
+                        </div>
+                        </div>
+                        <div class="col-sm-4">
+                        <div class="card">
+                            <div class="image">
+                                <img src="283995607_3194070000857705_5398020701507821655_n.jpg" />
+                            </div>
+                            <div class="card-inner">
+                                <div class="header">
+                                    <h2 class="Event_titles">Title</h2>
+                                    <div class="header_div_p">
+                                        <img src="./SVG/calendar/schedule-calendar-icon.svg" alt="">
+                                        <p>Nov. 18 2023</p>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        </div>
+                        <div class="col-sm-4">
+                        <div class="card">
+                            <div class="image">
+                                <img src="283995607_3194070000857705_5398020701507821655_n.jpg" />
+                            </div>
+                            <div class="card-inner">
+                                <div class="header">
+                                    <h2 class="Event_titles">Title</h2>
+                                    <div class="header_div_p">
+                                        <img src="./SVG/calendar/schedule-calendar-icon.svg" alt="">
+                                        <p>Nov. 18 2023</p>
+                                    </div>
+                                </div>
+                            
+                            </div>
+                        </div>
+                        </div>
+                        
+                        
+
+                    
+                        
+                    </div>
+                    <p class="see_more"><a href="">See more</a></p>
+                    
+                </div>
+            </div>
+        </div>
+        <!-- Coures -->
+        <!-- College course -->
+        <div class="line_college_course">
+
+            <div class="course_body reveal">
+                <h1 class="course_header">COLLEGE</h1>
+                <p class="course_p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam architecto quasi, odit a placeat quaerat sapiente illum magni ab suscipit, tempora natus dolores earum! Quod possimus perferendis ab, pariatur earum nam autem quae suscipit dolores commodi numquam. Fugiat, cum, nostrum vero dolore architecto quidem corporis saepe pariatur ea, ducimus temporibus!</p>
+                <div class="div_for_course_cards">
+
+                
+                    <div class="COLEGE_CARD">
+                        <img src="./IMGS/college_course/hrs.jpg" alt="" class="image">
+                        <div class="text"></div>
+                    
+                        
+                        <div class="section">
+                            <p>HRS</p>
+                        </div>
+                        <div class="hero-btn">
+                            <a href="#">Learn More</a>
+                        </div>
+                        </div>
+                        <div class="COLEGE_CARD">
+                        <img src="./IMGS/college_course/act.jpg" alt="" class="image">
+                        <div class="text"></div>
+                    
+                        
+                        <div class="section">
+                            <p>ACT</p>
+                        </div>
+                        <div class="hero-btn">
+                            <a href="#">Learn More</a>
+                        </div>
+                        </div>
+                        <div class="COLEGE_CARD">
+                        <img src="./IMGS/college_course/bsoa.jpg" alt="" class="image">
+                        <div class="text"></div>
+                      
+                    
+                        <div class="section">
+                            <p>BSOA</p>
+                        
+                        </div>
+                        <div class="hero-btn">
+                            <a href="#">Learn More</a>
+                        </div>
+                        </div>
+                        <div class="COLEGE_CARD">
+                        <img src="./IMGS/college_course/ct.jpg" alt="" class="image">
+                        <div class="text"></div>
+                  
+
+                        <div class="section">
+                            <p>CT</p>
+                        </div>
+                        <div class="hero-btn">
+                            <a href="#">Learn More</a>
+                        </div>
+                        </div>
+                        <div class="COLEGE_CARD">
+                        <img src="./IMGS/college_course/diht.jpg" alt="" class="image">
+                        <div class="text"></div>
+                   
+
+                        <div class="section">
+                            <p>DIHT</p>
+                        </div>
+                        <div class="hero-btn">
+                            <a href="#">Learn More</a>
+                        </div>
+                    </div>
+                
+                </div>
+            </div>
+        </div> 
+        <!-- shs course -->
+        <div class="line_shs_course">
+
+            <div class="course_body reveal">
+               <!-- sss -->
+                <h1 class="course_header course_header_color">SENIOR HIGH SCHOOL</h1>
+                <p class="course_p course_p_shss">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam architecto quasi, odit a placeat quaerat sapiente illum magni ab suscipit, tempora natus dolores earum! Quod possimus perferendis ab, pariatur earum nam autem quae suscipit dolores commodi numquam. Fugiat, cum, nostrum vero dolore architecto quidem corporis saepe pariatur ea, ducimus temporibus!</p>
+                <div class="div_for_course_cards">
+
+            
+                    <div class="SHS_CARD">
+                        <img src="./IMGS/shs_course/abm.jpg" alt="" class="image">
+                        <div class="text SHS_text"></div>
+                       
+                        
+                        <div class="section">
+                            <p>ABM</p>
+                        </div>
+                        <div class="hero-btn">
+                            <a href="#">Learn More</a>
+                        </div>
+                        </div>
+                        <div class=" SHS_CARD">
+                        <img src="./IMGS/shs_course/gas.jpg" alt="" class="image">
+                        <div class="text SHS_text"></div>
+                     
+                        
+                        <div class="section">
+                            <p>GAS</p>
+                        </div>
+                        <div class="hero-btn">
+                            <a href="#">Learn More</a>
+                        </div>
+                        </div>
+                        <div class="SHS_CARD">
+                        <img src="./IMGS/shs_course/humss.jpg" alt="" class="image">
+                        <div class="text SHS_text"></div>
+                 
+                    
+                        <div class="section">
+                            <p>HUMSS</p>
+                        
+                        </div>
+                        <div class="hero-btn">
+                            <a href="#">Learn More</a>
+                        </div>
+                        </div>
+                        <div class="SHS_CARD">
+                        <img src="./IMGS/shs_course/stem.jpg" alt="" class="image">
+                        <div class="text SHS_text"></div>
+                    
+
+                        <div class="section">
+                            <p>STEM</p>
+                        </div>
+                        <div class="hero-btn">
+                            <a href="#">Learn More</a>
+                        </div>
+                        </div>
+                        <div class="SHS_CARD">
+                        <img src="./IMGS/shs_course/tvl.jpg" alt="" class="image">
+                        <div class="text SHS_text"></div>
+                  
+                        <div class="section">
+                            <p>TVL</p>
+                        </div>
+                        <div class="hero-btn">
+                            <a href="#">Learn More</a>
+                        </div>
+                    </div>
+            
+                </div>
+            
+            </div>
+        
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <img src="./SVG/CCST_LOGO/CCST_LOGO_WHITE.svg" alt="" class="logso">
+            <div class="row">
+                  <div class="col" id="company">
+                     
+                      <p class="col_p">
+                      Clark College of Science and Technology, Inc. (CCST) formerly Clark International College of Science
+                      </p>
+                     
+                  </div>
+
+
+                  <div class="col" id="services">
+                     <h3>Services</h3>
+                     <div class="links">
+                        <a href="#">Illustration</a>
+                        <a href="#">Creatives</a>
+                        <a href="#">Card Design</a>
+                     </div>
+                  </div>
+
+                  <div class="col" id="useful-links">
+                     <h3>Links</h3>
+                     <div class="links">
+                        <a href="about.html">About</a>
+                        <a href="contact_us.html">Contact us</a>
+                        <a href="#">Gallery</a>
+                        <a href="https://www.facebook.com/clarkcollege2005">Facebook</a>
+                     </div>
+                  </div>
+
+                  <div class="col" id="contact">
+                      <h3>Contact</h3>
+                      <div class="contact-details">
+                         <i class="fa fa-location"></i>
+                         <p class="location">St. Samsonville Subd. Dau, Mabalacat, Pampanga</p>
+                      </div>
+                      <div class="contact-details">
+                         <i class="fa fa-phone"></i>
+                         <p>(045)-624-0215</p>
+                      </div>
+                      <div class="contact-details">
+                         <i class="fa fa-phone"></i>
+                         <p>0947-8038-231</p>
+                      </div>
+                     
+                  
+                  
+                  </div>
+            </div>
+
+         
+            
+        </div>
+        
+     </footer>
+</body>
+</html>
