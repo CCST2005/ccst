@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us - Clark College of Science and Technology</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/media_qry.css">
+ 
+    <link rel="stylesheet" href="./css/contact.css">
+    <link rel="stylesheet" href="./css/footer.css">
+</head>
+<body>
+<script>
+        function animation_hamburger(){
+            hamburger_id.classList.toggle("active");
+            Nav_for_mobile_id.classList.toggle("active");
+            id_apply_copy.classList.toggle("active");
+            id_messenger.classList.toggle("active");
+        }
+        // animation on scroll
+        window.addEventListener('scroll',reveal);
+
+        function reveal(){
+            var reveals = document.querySelectorAll('.reveal');
+           
+            for(var i = 0; i < reveals.length; i++){
+                var windowheight = window.innerHeight;
+                var revealtop = reveals[i].getBoundingClientRect().top;
+                var revealpoint = 100;
+
+                if(revealtop < windowheight - revealpoint){
+                    reveals[i].classList.add('active');
+    
+                }
+                else{
+                    reveals[i].classList.reveal('active');
+              
+                }
+            }
+        }
+    </script>
+
+    <!-- Contact & Fb link -->
+    <div class="Contact_Fb_link">
+        <!-- Contact -->
+        <div>
+            <img src="./SVG/Phone/phone-5978.svg" alt="">
+            <h4>(045)-624-0215</h4>
+        </div>
+        <!-- facebook -->
+        <div>
+            <img src="./SVG/facebook/facebook.svg" alt="">
+            <h4>clarkcollege2005</h4>
+        </div>
+    </div>
+    <div class="div_For_Nav_And_Mobile_Nav">
+        <!-- Navbar -->
+        <nav>
+            <!-- CCST LOGO -->
+            <a href="index.html"><img src="./SVG/CCST_LOGO/CCST_LOGO.svg" alt=""></a>
+            <!-- OPTIONS -->
+
+            <ul>
+                <li><a href="index.html"><h2>Home</h2></a></li>
+                <li><a href="gallery.html"><h2>Gallery</h2></a></li>
+                <li><a href="admission.html"><h2>Admission</h2></a></li>
+                <li><a href="contact_us.html"><h2>Contact us</h2></a></li>
+                <li><a href="about.html"><h2>About us</h2></a></li>
+            </ul>
+            <button class="apply">
+                <span></span>
+            </button>
+            <!-- Hambur -->
+
+
+            <button id="hamburger_id" onclick="animation_hamburger()" class="hamburger">
+                <div></div>
+            </button>
+        </nav>
+        <!-- Nav_for_mobile -->
+        <div id="Nav_for_mobile_id" class="Nav_for_mobile">
+                <ul>
+                    <a href="index.html"><li><h2 class="Nav_animation_one">Home</h2></li></a>
+                    <a href="gallery.html"><li><h2 class="Nav_animation_two">Gallery</h2></li></a>
+                    <a href="admission.html"><li><h2 class="Nav_animation_three">Admission</h2></li></a>
+                    <a href="contact_us.html"><li><h2 class="Nav_animation_four">Contact us</h2></li></a>
+                    <a href="about.html"><li><h2 class="Nav_animation_five">About us</h2></li></a>
+                </ul>
+        </div>
+        <!-- Copy_of_apply_button -->
+        <button class="apply_copy" id="id_apply_copy">
+            <span>ONLINE APPLICATION</span>
+        </button>
+    </div>
+
+    <!-- messenger -->
+    <a id="id_messenger" class="a_messenger" href="https://www.messenger.com/t/1430646383866751/">
+        <div class="messenger_contact">
+        <img src="./IMGS/messenger_logo/messenger_logo.png" alt="">
+    </div></a>
+    <!-- content -->
+    <section class="div_contact">
+        <!-- partial:index.partial.html -->
+        
+        <form class="form_contact cf">
+            <h1 class="h1_contact">Get in touch</h1>
+            <div class="half left cf">
+                <div class="input_container">
+                    
+                    <input onkeyup="check_placehokder()" type="text" id="input-name" placeholder="" required="required">
+                    <label id="name_label" class="label" for="input-name">Name</label>
+                </div>
+                <div class="input_container">
+                    
+                    <input  onkeyup="check_placehokder()" type="email" id="input-email" placeholder="" required="required">
+                    <label id="name_email" class="label"  for="input-email">Email address</label>
+                </div>
+                <div class="input_container">
+                    
+                    <input  onkeyup="check_placehokder()" type="text" id="input-subject" placeholder="" required="required">
+                    <label id="name_subject" class="label" for="input-subject">Subject</label>
+                </div>
+                
+            </div>
+            <script>
+                function check_placehokder(){
+                 var name = document.getElementById("input-name");
+                 var email = document.getElementById("input-email");
+                 var message = document.getElementById("input-message");
+                 var subject = document.getElementById("input-subject");
+                    if (name.value != ""){
+                        name_label.classList.add("valid");
+                        name.classList.add("valid_input");
+                    }
+                    else {
+                        name_label.classList.remove("valid");
+                        name.classList.remove("valid_input");
+                    }
+                    if(email.value != ""){
+                        name_email.classList.add("valid");
+                        email.classList.add("valid_input");
+                    }
+                    else {
+                        name_email.classList.remove("valid");
+                        email.classList.remove("valid_input");
+                    }
+                    if(subject.value != ""){
+                        name_subject.classList.add("valid");
+                        subject.classList.add("valid_input");
+                    }
+                    else{
+                        name_subject.classList.remove("valid");
+                        subject.classList.remove("valid_input");
+                    }
+                    if(message.value != ""){
+                        
+                        message.classList.add("valid_input");
+                    }
+                    else{
+                        message.classList.remove("valid_input");
+                    }
+                }
+            </script>
+            <div class="half right cf">
+                <textarea name="message" onkeyup="check_placehokder()" type="text" id="input-message" required="required" placeholder="Message"></textarea>
+                
+                <input type="submit" value="Send message" id="input-submit">
+            </div>  
+        </form>
+        <!-- partial -->
+    </section>
+        <!-- Footer -->
+        <footer>
+        <div class="container">
+            <img src="./SVG/CCST_LOGO/CCST_LOGO_WHITE.svg" alt="" class="logso">
+            <div class="row">
+                  <div class="col" id="company">
+                     
+                      <p class="col_p">
+                      Clark College of Science and Technology, Inc. (CCST) formerly Clark International College of Science
+                      </p>
+                     
+                  </div>
+
+
+                  <div class="col" id="services">
+                     <h3>Services</h3>
+                     <div class="links">
+                        <a href="#">Illustration</a>
+                        <a href="#">Creatives</a>
+                        <a href="#">Card Design</a>
+                     </div>
+                  </div>
+
+                  <div class="col" id="useful-links">
+                     <h3>Links</h3>
+                     <div class="links">
+                        <a href="about.html">About</a>
+                        <a href="contact_us.html">Contact us</a>
+                        <a href="#">Gallery</a>
+                        <a href="https://www.facebook.com/clarkcollege2005">Facebook</a>
+                     </div>
+                  </div>
+
+                  <div class="col" id="contact">
+                      <h3>Contact</h3>
+                      <div class="contact-details">
+                         <i class="fa fa-location"></i>
+                         <p class="location">St. Samsonville Subd. Dau, Mabalacat, Pampanga</p>
+                      </div>
+                      <div class="contact-details">
+                         <i class="fa fa-phone"></i>
+                         <p>(045)-624-0215</p>
+                      </div>
+                      <div class="contact-details">
+                         <i class="fa fa-phone"></i>
+                         <p>0947-8038-231</p>
+                      </div>
+                     
+                  
+                  
+                  </div>
+            </div>
+
+         
+            
+        </div>
+        
+     </footer>
+</body>
+</html>
