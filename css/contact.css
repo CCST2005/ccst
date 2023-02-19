@@ -228,3 +228,10 @@ background-color: white;
     }
   
   }
+@media (max-width: 1000px) {
+    .form_contact{
+      margin-bottom:400px;
+  
+    }
+  
+  }
